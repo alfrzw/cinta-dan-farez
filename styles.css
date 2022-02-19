@@ -1,0 +1,90 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  height: 70px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: 0.4s;
+}
+.bg-navbar {
+  background-color: #4d5eac;
+  transition: 0.4s;
+}
+/* Navbar End */
+
+/* Home */
+.home {
+  height: 700px;
+  background-image: url(img/bghome1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* Home End */
+
+/* About */
+.agedate {
+  padding-bottom: 4rem;
+}
+.age {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+.date {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+.col-about {
+  margin-top: 70px;
+}
+/* About End */
+
+/* Gallery */
+/* Video BG */
+.banner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.banner video {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(60%);
+}
+.banner.col-md-12 {
+  position: absolute;
+  z-index: 1;
+}
+.banner h1 {
+  position: relative;
+  z-index: 2;
+}
+/* Video BG End */
+/* Gallery End */
+
+/* Massage */
+.judulmassage {
+  margin-top: 70px;
+}
+/* Massage */
+
+/* Footer */
+.cwl {
+  padding: 10px;
+  color: white;
+  background-color: #4d5eac;
+}
+/* Footer End */

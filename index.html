@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+
+    <!-- Icon From Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <title>Cinta dan Farez</title>
+    <link rel="icon" type="image/x-icon" href="img/couple.png" />
+  </head>
+  <body>
+    <!-- JS Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">CF</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#mygallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#massage">Massage</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar Script -->
+    <script>
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 630) {
+          nav.classList.add('shadow', 'bg-navbar');
+        } else {
+          nav.classList.remove('shadow', 'bg-navbar');
+        }
+      });
+    </script>
+    <!-- Navbar Script End -->
+    <!-- Navbar End -->
+
+    <!-- Section Home -->
+    <section class="home" id="home">
+      <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+        <div class="content text-center">
+          <h1 class="display-2 text-white fw-bold">Halo, Selamat Datang!</h1>
+        </div>
+      </div>
+    </section>
+    <!-- Section Home End -->
+
+    <!-- Section About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-about col-md-12">
+            <h1 class="text-center fw-bold mb-4 mt-4">About Us</h1>
+            <p class="text-center mt-2 mb-4">
+              Awalnya ketemuan di rumah orang buat kerja bareng. Pokoknya aneh banget si, dari awal banget ketemuan sampai jadian kita jarang banget banget dan banget ngomong. Akhirnya, tanggal 15
+              Juni, 2021 kita jadian. Kalau diingat ingat buat ngakak plis, huhuw. Apalagi pas jadiannya, lucu banget
+            </p>
+          </div>
+        </div>
+        <div class="row agedate justify-content-around">
+          <div class="col-md-6 align-items-center text-center">
+            <img class="age" src="img/cal.png" alt="age" />
+            <div class="umurhubungan">
+              <script>
+                var dob = new Date('06/15/2021');
+                //calculate month difference from current date in time
+                var month_diff = Date.now() - dob.getTime();
+
+                //convert the calculated difference in date format
+                var age_dt = new Date(month_diff);
+
+                //extract year from date
+                var year = age_dt.getUTCFullYear();
+
+                //extract month from date
+                var month = age_dt.getUTCMonth();
+
+                //now calculate the age of the user
+                var age = Math.abs(year - 1970);
+
+                //display the calculated age
+                document.write('Sudah berjalan selama ' + age + ' tahun ' + month + ' bulan hubungan kita');
+              </script>
+            </div>
+          </div>
+          <div class="col-md-6 align-items-center text-center">
+            <img class="date" src="img/cal2.png" alt="date" />
+            <p class="mb-4">Anniv kita tanggal 15 Juni</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section About End -->
+
+    <!-- Section Gallery -->
+    <!-- Styles Swiper -->
+    <style>
+      .mygallery {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      .sgallery {
+        width: 100%;
+      }
+
+      .ss0 {
+        width: 300px !important;
+        height: 300px !important;
+      }
+
+      .ss0 img {
+        width: 100%;
+      }
+    </style>
+    <!-- Styles Swiper End -->
+    <!-- Swiper -->
+    <section class="mygallery" id="mygallery">
+      <div class="banner">
+        <video autoplay loop muted>
+          <source src="bgvid/vid2.mp4" />
+        </video>
+        <div class="col-md-12">
+          <h1 class="text-center fw-bold text-white mt-4 mb-4">Gallery</h1>
+          <div class="swiper mySwiper sgallery mt-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </div>
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              </div>
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              </div>
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              </div>
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+              </div>
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+              </div>
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+              </div>
+              <div class="swiper-slide ss0">
+                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Swiper End -->
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 20,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+      });
+    </script>
+    <!-- Initialize Swiper End -->
+    <!-- Section Gallery End -->
+
+    <!-- Our Profile -->
+    <section class="massage" id="massage">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 judulmassage">
+            <h1 class="text-center fw-bold mt-4 mb-4">A Massage for You</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center isimassage">
+            <p>Halo Byy Byy!</p>
+            <p>Gimana? Kamu suka kan? Semoga aja suka sii, aku buatnya udah lama banget, capeek. Terus bagus ngga byy? bagus laah, aku buatnya dengan penuh perasaan dan semangat ogh. Xixixi</p>
+            <p>
+              Waktu kamu dulu nge share reels ke aku yang isinya kalau dipencet ada pesannya, kamu bilang "apik". Terus ya aku janji mau buatin yang kaya di reels itu ke kamu. Kamu paling udah lupa
+              si, apa masih ingat? Jujur aku mau lupa lho, hehe.
+            </p>
+            <p>Bingung mau ngomong apalagi. Umm...</p>
+            <p>Pokoknya ya itu si, ini websitenya, udah aku buatin dengan spesial untuk kamu. Semoga aja kamu suka. Aamiin</p>
+            <p>
+              Sama aku mau ngasih pesan ke kamu. Kamu pokoknya jaga kesehatan, makannya jangan telat, jangan lupa istirahat, jangan stress, jangan panik dalam kondisi yang ngga bagus, tetap semangat
+              ngeraih apa yang kamu inginkan, jangan putus asa, jangan gampang ngeluh, jangan pikirkan perkataan orang lain ke kamu, dan masih banyak yang lain
+            </p>
+            <p>Sama kalau ada sesuatu ngomong aja sama aku, apapun itu. Mau itu suatu hal yang bagus banget, bagus, biasa, jelek, jelek banget, sampai jelek banget banget.</p>
+            <p>Ihh, capek Byy, ngetik terus. Udah si, gitu aja. Kalau terlalu lama baca ini entar matanya sakit, lihat layar terus. Xixixi. Maaf ya Byy Byy Sayang</p>
+            <p>Terimkasih udah sering ada buat aku Byy Byy. I Love You Byy, banyak love nya, sampai ngga kehitung</p>
+            <p>Dari pacarmu yang nyebelin, Farezi :)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Profile End -->
+
+    <!-- Footer -->
+    <section>
+      <div class="footer">
+        <div class="col-md-12">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#4d5eac"
+              fill-opacity="1"
+              d="M0,224L34.3,224C68.6,224,137,224,206,197.3C274.3,171,343,117,411,128C480,139,549,213,617,245.3C685.7,277,754,267,823,245.3C891.4,224,960,192,1029,186.7C1097.1,181,1166,203,1234,218.7C1302.9,235,1371,245,1406,250.7L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="col-md-12 cwl">
+          <p class="text-center fw-bold">Created with Love <i class="bi bi-heart-fill text-danger"></i></p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer End -->
+  </body>
+</html>
